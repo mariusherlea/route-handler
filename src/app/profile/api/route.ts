@@ -7,14 +7,14 @@ export async function GET(request: NextRequest) {
   cookies().set('surname', 'Doe');
   const cookie = request.cookies.get('name');
 
-  // console.log(requestHeaders.get('Authorization'));
-  // console.log(headerList.get('Authorization'));
+  console.log(requestHeaders.get('Authorization'));
+  console.log(headerList.get('Authorization'));
   console.log(cookie);
   console.log(request.cookies.get('surname'));
   return new Response('<h1>Profile api data</h1>', {
     headers: {
       'Content-Type': 'text/html',
-      'Set-Cookie': 'name=Marius',
+      // 'Set-Cookie': 'name=Marius',
     },
   });
 }
